@@ -59,6 +59,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushbutton1">
     <property name="geometry">
@@ -86,7 +89,7 @@
      <string>Your Message :</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="text_message_to_print">
+   <widget class="QTextEdit" name="text_message">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -130,13 +133,67 @@
      <string>file</string>
     </property>
     <addaction name="actionclose"/>
+    <addaction name="actionsave"/>
+    <addaction name="actionnew"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actioncopy"/>
+    <addaction name="actioncut"/>
+    <addaction name="actionpaste"/>
    </widget>
    <addaction name="menufile"/>
+   <addaction name="menuedit"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionclose">
    <property name="text">
     <string>close</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionnew">
+   <property name="text">
+    <string>new</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actioncut">
+   <property name="text">
+    <string>cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="text">
+    <string>paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
    </property>
   </action>
  </widget>

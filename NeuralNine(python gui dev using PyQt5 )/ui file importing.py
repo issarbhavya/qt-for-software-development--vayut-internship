@@ -9,7 +9,8 @@ class MyGUI(QMainWindow):
         self.show()
         
         self.pushbutton1.clicked.connect(self.login)
-        self.button_for_printing.clicked.connect(lambda: self.print_it(self.text_message_to_print.toPlainText()))
+        self.button_for_printing.clicked.connect(lambda: self.print_it(self.text_message.toPlainText()))
+        self.actionclose.triggered.connect(exit)
         
     def print_it(self,msg):
         message=QMessageBox()
@@ -21,7 +22,7 @@ class MyGUI(QMainWindow):
     def login(self):
         if(self.login_id_entered.text()== "bhavya issar" and self.password_entered.text()== "1234"):
             self.button_for_printing.setEnabled(True)
-            self.text_message_to_print.setEnabled(True)
+            self.text_message.setEnabled(True)
         else:
             message=QMessageBox()
             message.setText("wrong credentials !!")
