@@ -5,7 +5,7 @@ class MyGUI(QMainWindow):
     
     def __init__(self):
         super(MyGUI,self).__init__()
-        uic.loadUi("new_gui.ui",self)
+        uic.loadUi("login id and passsword gui.ui",self)
         self.show()
         
         self.pushbutton1.clicked.connect(self.login)

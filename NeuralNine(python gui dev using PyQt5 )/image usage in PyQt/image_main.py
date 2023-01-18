@@ -5,7 +5,7 @@ class MyGUI(QMainWindow):
     
     def __init__(self):
         super(MyGUI,self).__init__()
-        uic.loadUi("login id and passsword gui.ui",self)
+        uic.loadUi("image_in_gui.ui",self)
         self.show()
         
 def main():
