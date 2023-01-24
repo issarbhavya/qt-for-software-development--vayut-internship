@@ -110,12 +110,25 @@
      <rect>
       <x>10</x>
       <y>330</y>
-      <width>291</width>
+      <width>211</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string>press this to print the above message</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="default_message_box">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>340</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>default message box</string>
     </property>
    </widget>
   </widget>
