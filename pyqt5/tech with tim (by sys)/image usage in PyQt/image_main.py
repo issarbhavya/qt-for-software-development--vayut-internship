@@ -6,7 +6,7 @@ class MyGUI(QMainWindow):
     
     def __init__(self):
         super(MyGUI,self).__init__()
-        uic.loadUi("..\image usage in PyQt\image_in_gui.ui",self)
+        uic.loadUi("image_in_gui.ui",self)
         self.picture_label.setPixmap(QtGui.QPixmap("cat.jpg"))
         self.show()
         self.cat_button.clicked.connect(self.cat_press)
