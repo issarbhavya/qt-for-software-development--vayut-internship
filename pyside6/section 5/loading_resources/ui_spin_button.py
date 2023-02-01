@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QPushButton, QSizePolicy,
     QSpinBox, QWidget)
-#import resources_icon_rc
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -32,6 +32,9 @@ class Ui_Form(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.plus_button = QPushButton(self.widget)
         self.plus_button.setObjectName(u"plus_button")
+        icon = QIcon()
+        icon.addFile(u":/newPrefix/plus.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.plus_button.setIcon(icon)
 
         self.horizontalLayout.addWidget(self.plus_button)
 
@@ -42,6 +45,7 @@ class Ui_Form(object):
 
         self.minus_button = QPushButton(self.widget)
         self.minus_button.setObjectName(u"minus_button")
+        self.minus_button.setIcon(icon)
 
         self.horizontalLayout.addWidget(self.minus_button)
 

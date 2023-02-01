@@ -28,6 +28,10 @@
       <property name="text">
        <string>plus</string>
       </property>
+      <property name="icon">
+       <iconset resource="resources_icon.qrc">
+        <normaloff>:/newPrefix/plus.png</normaloff>:/newPrefix/plus.png</iconset>
+      </property>
      </widget>
     </item>
     <item>
@@ -37,6 +41,10 @@
      <widget class="QPushButton" name="minus_button">
       <property name="text">
        <string>minus</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources_icon.qrc">
+        <normaloff>:/newPrefix/plus.png</normaloff>:/newPrefix/plus.png</iconset>
       </property>
      </widget>
     </item>
