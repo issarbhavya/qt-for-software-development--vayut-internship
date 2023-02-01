@@ -1,8 +1,8 @@
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget
-from ui_login_password import Ui_Form
+from ui_login_password import Ui_Widget
 
-class Widget(QWidget,Ui_Form):
+class Widget(QWidget,Ui_Widget):
     def __init__(self):
         super().__init__()
         self.setupUi(self)

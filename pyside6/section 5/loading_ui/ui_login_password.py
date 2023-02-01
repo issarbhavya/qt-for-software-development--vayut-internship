@@ -19,15 +19,15 @@ from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QTextEdit,
     QVBoxLayout, QWidget)
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(400, 349)
-        self.pushButton = QPushButton(Form)
+class Ui_Widget(object):
+    def setupUi(self, Widget):
+        if not Widget.objectName():
+            Widget.setObjectName(u"Widget")
+        Widget.resize(400, 349)
+        self.pushButton = QPushButton(Widget)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(244, 12, 91, 41))
-        self.widget = QWidget(Form)
+        self.widget = QWidget(Widget)
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(30, 10, 197, 52))
         self.verticalLayout = QVBoxLayout(self.widget)
@@ -65,7 +65,7 @@ class Ui_Form(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
-        self.widget1 = QWidget(Form)
+        self.widget1 = QWidget(Widget)
         self.widget1.setObjectName(u"widget1")
         self.widget1.setGeometry(QRect(30, 90, 341, 215))
         self.verticalLayout_2 = QVBoxLayout(self.widget1)
@@ -94,17 +94,17 @@ class Ui_Form(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
 
 
-        self.retranslateUi(Form)
+        self.retranslateUi(Widget)
 
-        QMetaObject.connectSlotsByName(Form)
+        QMetaObject.connectSlotsByName(Widget)
     # setupUi
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"check", None))
-        self.label.setText(QCoreApplication.translate("Form", u"login id", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"password", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"The below functions will be enabled once the id password matches", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"print", None))
+    def retranslateUi(self, Widget):
+        Widget.setWindowTitle(QCoreApplication.translate("Widget", u"Form", None))
+        self.pushButton.setText(QCoreApplication.translate("Widget", u"check", None))
+        self.label.setText(QCoreApplication.translate("Widget", u"login id", None))
+        self.label_2.setText(QCoreApplication.translate("Widget", u"password", None))
+        self.label_3.setText(QCoreApplication.translate("Widget", u"The below functions will be enabled once the id password matches", None))
+        self.pushButton_2.setText(QCoreApplication.translate("Widget", u"print", None))
     # retranslateUi
 
