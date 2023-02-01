@@ -3,14 +3,8 @@ import sys
 class class1(QWidget):
     def __init__(self):
         super().__init__()
-        # button1 = QPushButton("press 1")
-        # slider1 = QSlider()
+
         
-        # my_layout= QHBoxLayout()
-        # my_layout.addWidget(button1)
-        # my_layout.addWidget(slider1)
-        
-        # self.setLayout(my_layout)
         
 app=QApplication(sys.argv)
 window=class1()
