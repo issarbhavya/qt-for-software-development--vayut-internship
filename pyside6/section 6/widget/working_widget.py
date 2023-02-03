@@ -16,3 +16,6 @@ class Widget(QWidget,Ui_widget):
     def show_info_dialogue(self):
         ret = self.info_dialog.exec()
         self.label.setText("occupation is : "+ self.info_dialog.text_in_occupation+" , and Choice is : "+ self.info_dialog.text_in_combobox)
+        self.label.adjustSize()
+        
+        
