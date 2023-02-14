@@ -13,6 +13,20 @@ def button_clicked(self):
         
         than you can use the value inputed as per your requiremrnt
 
+#there are even functions like 
 
- 
+
+getDouble
+It allows integer/double input,
+there you can set a default value, minimum and maximum value as well
+
+
+getItems
+It allows user to select the items of a list through comboBox
+
+items=["a","b"]
+i,ok =QInputDialog.getItem(self,"title of dialogBox","text to be mentioned",items)
+
+if (ok):
+    self.label.setText(i)
 """
