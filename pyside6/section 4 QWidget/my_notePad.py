@@ -1,5 +1,7 @@
 from PySide6.QtWidgets import QSizePolicy,QTextEdit,QApplication, QWidget,QHBoxLayout,QVBoxLayout,QPushButton
 import sys
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QPalette
 class class1(QWidget):
     def __init__(self):
         super().__init__()
@@ -12,7 +14,7 @@ class class1(QWidget):
         cut_button=QPushButton("cut")
         paste_button=QPushButton("paste")
         undo_button=QPushButton("undo")
-        redo_button=QPushButton("redo")
+        self.redo_button=QPushButton("redo")
         
         #copy_button.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
         #this is used to set size on responce to expansion
@@ -20,7 +22,7 @@ class class1(QWidget):
         cut_button.clicked.connect(self.text_edit.cut)
         paste_button.clicked.connect(self.text_edit.paste)
         undo_button.clicked.connect(self.text_edit.undo)
-        redo_button.clicked.connect(self.text_edit.redo)
+        self.redo_button.clicked.connect(self.text_edit.redo)
         
         
         layout_for_mytextedit=QHBoxLayout()
@@ -28,7 +30,10 @@ class class1(QWidget):
         layout_for_mytextedit.addWidget(cut_button)
         layout_for_mytextedit.addWidget(paste_button)
         layout_for_mytextedit.addWidget(undo_button)
-        layout_for_mytextedit.addWidget(redo_button)
+        layout_for_mytextedit.addWidget(self.redo_button)
+        
+
+
 
 
 
@@ -40,6 +45,7 @@ class class1(QWidget):
         main_layout.addWidget(self.text_edit)
 
         self.setLayout(main_layout)
+
 
 
         

@@ -22,12 +22,12 @@ class Widget(QWidget, Ui_Widget):
         """
       
         #getOpenFileName  
-        """
+        
         file_name,_ = QFileDialog.getOpenFileName(self, "Open File",
                                                       "/home",
                                                       "Images (*.png *.xpm *.jpg);;All files(*.*)")
         print("Your chosen file is : ",  file_name)          
-        """   
+          
 
         #getOpenFileNames
         
@@ -39,6 +39,8 @@ class Widget(QWidget, Ui_Widget):
             print(f)           
         """
 
+
+        """
         #getSaveFileName
         
         file_name,_ = QFileDialog.getSaveFileName(self, "Save File",
@@ -47,12 +49,10 @@ class Widget(QWidget, Ui_Widget):
 
                                 # first line specifies the heading of the dialog box   
                                 # 2nd line contains the location where the dialog box should pop up
-                                # last line specifies the type of files to show, first is
-                                # image file nd then second is all types of file
-        
-        
-        
-        print(file_name)        
+                                # last line specifies the type of files to show
+        print(file_name)      
+        """
+  
         
         
       
