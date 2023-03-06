@@ -1,5 +1,5 @@
 from PySide6.QtCore import Qt,QByteArray,QTextStream,QIODevice,QFile,QJsonArray,QJsonDocument,QUrl
-from PySide6.QtWidgets import QWidget,QListWidget
+from PySide6.QtWidgets import QWidget,QListWidget,QListWidgetItem
 from ui_widget import Ui_Widget
 
 from PySide6.QtNetwork import QNetworkAccessManager,QNetworkRequest,QNetworkReply
@@ -43,5 +43,9 @@ class Widget(QWidget,Ui_Widget):
             text="[" + str(i)+ "] : " + str( object["title"]) 
             
             self.listWidget.addItem(text) # why is it not printing 
-        
+            # data=object.data(Qt.DisplayRole)
+            
+            self.textEdit.setText(self.listWidget)
+            
+            
         
