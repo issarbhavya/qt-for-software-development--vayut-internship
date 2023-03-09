@@ -31,7 +31,7 @@ class Ui_Widget(object):
         __qtreewidgetitem.setText(0, u"1");
         self.treeWidget.setHeaderItem(__qtreewidgetitem)
         self.treeWidget.setObjectName(u"treeWidget")
-        self.treeWidget.setGeometry(QRect(20, 10, 341, 241))
+        self.treeWidget.setGeometry(QRect(20, 20, 341, 231))
 
         self.retranslateUi(Widget)
 

@@ -13,17 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>3</x>
-     <y>50</y>
-     <width>381</width>
-     <height>241</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -55,6 +45,16 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>371</width>
+     <height>231</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

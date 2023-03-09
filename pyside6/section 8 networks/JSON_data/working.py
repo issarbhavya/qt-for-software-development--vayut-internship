@@ -41,11 +41,13 @@ class Widget(QWidget,Ui_Widget):
         for i in range (array.count()):
             object = array.at(i).toObject 
             text="[" + str(i)+ "] : " + str( object["title"]) 
+            print(text)
             
-            self.listWidget.addItem(text) # why is it not printing 
+            self.listWidget.addItem(QListWidgetItem(text)) # why is it not printing
+             
             # data=object.data(Qt.DisplayRole)
             
-            self.textEdit.setText(self.listWidget)
+            #self.textEdit.setText(self.listWidget)
             
             
         
