@@ -22,6 +22,10 @@ class Widget(QWidget,Ui_Widget):
         self.save_changes_button.clicked.connect(self.save_changes_button_was_clicked)
         self.add_new_button.clicked.connect(self.add_button_was_clicked)
         self.save_new_button.clicked.connect(self.save_new_button_was_clicked)
+        self.delete_button.clicked.connect(self.delete_button_was_clicked)
+
+                           
+                           
                            
     def calender_date_changed(self):
         print("date changed")
@@ -72,6 +76,7 @@ class Widget(QWidget,Ui_Widget):
                 
                     
             self.tasklistWidget.addItem(item)
+            
         
         db.close()
             
@@ -107,11 +112,11 @@ class Widget(QWidget,Ui_Widget):
         db.close()
         print('Saved.')
         
-        # message prompt
-        message_box=QMessageBox()
-        message_box.setText("your changes are saved")
-        message_box.setStandardButtons(QMessageBox.Ok)
-        message_box.exec_()
+        # # message prompt
+        # message_box=QMessageBox()
+        # message_box.setText("your changes are saved")
+        # message_box.setStandardButtons(QMessageBox.Ok)
+        # message_box.exec_()
 
     
     def add_button_was_clicked(self):
@@ -159,12 +164,49 @@ class Widget(QWidget,Ui_Widget):
         # message_box.exec_()
             
             
-        
+            
+    ###################################################################       
+
         
             
         
+            
+    def delete_button_was_clicked(self):
+        listitems=self.tasklistWidget.selectedItems()
+        if not listitems:
+            return
+        for item in listitems:
+ 
+            
+
+            selected_item = self.tasklistWidget.takeItem(self.tasklistWidget.row(item))
+
+            str_selected_item=selected_item.text()
+            print("\n")
+
+            self.update_deleted_item(str_selected_item)
+            
+            
+            
+            
+    def update_deleted_item(self,str_item_selected):
         
+        db = sqlite3.connect("task.db.sqlite3", timeout=10)
+        cursor= db.cursor()
         
+        self.date_selected=self.calendarWidget.selectedDate()
+        self.date_selected=self.date_selected.toPython()
         
+
+        
+        query="DELETE FROM Tasks WHERE task=? AND date=?"
+        row=(str_item_selected,self.date_selected)
+        
+        cursor.execute(query,row)
+        db.commit()
+        db.close()
+        
+        #for instantly updating the tasklist
+        self.update_task_list(self.date_selected)
         
         

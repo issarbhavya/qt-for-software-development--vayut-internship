@@ -1,8 +1,0 @@
-*.pyc
-*.dll
-*\build
-*.rar
-*.zip
-*.pyd
-*\__pycache__
-*.qm

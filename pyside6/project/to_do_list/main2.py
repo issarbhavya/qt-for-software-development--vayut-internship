@@ -1,7 +1,7 @@
 import sys
 
 from PySide6 import QtWidgets
-from prac_working import Widget
+from working2 import Widget
 
 app=QtWidgets.QApplication(sys.argv)
 
