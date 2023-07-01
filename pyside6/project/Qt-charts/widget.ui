@@ -43,7 +43,9 @@
        <item>
         <widget class="QFrame" name="frame_4">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">padding: 10px;
+border-radius: 5px;
+backgroung-color: rgba(33,43,51,100)</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -55,27 +57,24 @@
           <item>
            <widget class="QPushButton" name="pushButton">
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">border-radius: 15px;</string>
             </property>
             <property name="text">
              <string>Percentage bar chart</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset resource="resource.qrc">
               <normaloff>:/icons/icons/chart-column-solid.svg</normaloff>:/icons/icons/chart-column-solid.svg</iconset>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_5">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Temperature records</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset resource="resource.qrc">
               <normaloff>:/icons/icons/temp-svgrepo-com.svg</normaloff>:/icons/icons/temp-svgrepo-com.svg</iconset>
             </property>
            </widget>
@@ -86,7 +85,7 @@
              <string>Nested donuts</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset resource="resource.qrc">
               <normaloff>:/icons/icons/pie-chart-svgrepo-com.svg</normaloff>:/icons/icons/pie-chart-svgrepo-com.svg</iconset>
             </property>
            </widget>
@@ -97,7 +96,7 @@
              <string>line chart</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset resource="resource.qrc">
               <normaloff>:/icons/icons/chart-line-solid.svg</normaloff>:/icons/icons/chart-line-solid.svg</iconset>
             </property>
            </widget>
@@ -108,7 +107,7 @@
              <string>bar chart</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset resource="resource.qrc">
               <normaloff>:/icons/icons/chart-column-solid.svg</normaloff>:/icons/icons/chart-column-solid.svg</iconset>
             </property>
            </widget>
@@ -187,10 +186,10 @@
              <item>
               <widget class="QPushButton" name="pushButton_7">
                <property name="text">
-                <string>minimize</string>
+                <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="resource.qrc">
                  <normaloff>:/icons/icons/minimize-svgrepo-com.svg</normaloff>:/icons/icons/minimize-svgrepo-com.svg</iconset>
                </property>
               </widget>
@@ -198,10 +197,10 @@
              <item>
               <widget class="QPushButton" name="pushButton_8">
                <property name="text">
-                <string>expand</string>
+                <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="resource.qrc">
                  <normaloff>:/icons/icons/enlarge-2-svgrepo-com.svg</normaloff>:/icons/icons/enlarge-2-svgrepo-com.svg</iconset>
                </property>
               </widget>
@@ -209,10 +208,10 @@
              <item>
               <widget class="QPushButton" name="pushButton_9">
                <property name="text">
-                <string>close</string>
+                <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="resource.qrc">
                  <normaloff>:/icons/icons/cross-svgrepo-com.svg</normaloff>:/icons/icons/cross-svgrepo-com.svg</iconset>
                </property>
               </widget>
@@ -464,10 +463,48 @@
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>copyright Bhavya V 1.0</string>
+           <widget class="QFrame" name="frame_13">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>copyright Bhavya V 1.0</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_14">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QFrame" name="frame_15">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>0</y>
+               <width>120</width>
+               <height>80</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -484,14 +521,14 @@
      <x>0</x>
      <y>0</y>
      <width>819</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections/>
 </ui>
