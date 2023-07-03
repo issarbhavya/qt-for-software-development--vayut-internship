@@ -14,32 +14,9 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the button text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 13px; /* Font size */
-}
-
-QLabel {
-    color: #333333; /* Text color */
-    font-size: 12px; /* Font size */
-    font-weight: bold; /* Font weight */
-}
-
-</string>
-   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QWidget" name="left_menu_widget" native="true">
-      <property name="styleSheet">
-       <string notr="true">QFrame {
-    border: 1px solid #000000; /* 1px solid black border for all frames */
-}</string>
-      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QFrame" name="frame_3">
@@ -209,9 +186,6 @@ QLabel {
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
               <widget class="QPushButton" name="pushButton_7">
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
                <property name="text">
                 <string>minimize</string>
                </property>
@@ -251,9 +225,6 @@ QLabel {
        </item>
        <item>
         <widget class="QFrame" name="frame_8">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -313,11 +284,6 @@ QLabel {
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <item>
                <widget class="QFrame" name="frame_18">
-                <property name="styleSheet">
-                 <string notr="true">QFrame#frame_18 {
-    border: 1px solid #000000; /* 1px solid black border for all frames */
-}</string>
-                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -345,11 +311,6 @@ QLabel {
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QFrame {
-    border: 1px solid #000000; /* 1px solid black border for all frames */
-}</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -498,9 +459,6 @@ QLabel {
        </item>
        <item>
         <widget class="QFrame" name="frame_9">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -510,11 +468,6 @@ QLabel {
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
            <widget class="QLabel" name="label_2">
-            <property name="styleSheet">
-             <string notr="true">QFrame {
-    border: 1px solid #000000; /* 1px solid black border for all frames */
-}</string>
-            </property>
             <property name="text">
              <string>copyright Bhavya V 1.0</string>
             </property>

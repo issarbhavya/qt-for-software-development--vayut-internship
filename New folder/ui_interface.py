@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-
 ################################################################################
-## Form generated from reading UI file 'interfacegfMIIF.ui'
+## Form generated from reading UI file 'interface.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -28,29 +26,10 @@ class Ui_MainWindow(object):
         MainWindow.resize(819, 465)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"QPushButton {\n"
-"    background-color: #4CAF50; /* Green background color */\n"
-"    color: white; /* Text color */\n"
-"    padding: 10px 20px; /* Padding around the button text */\n"
-"    border: none; /* No border */\n"
-"    border-radius: 5px; /* Rounded corners */\n"
-"    font-size: 13px; /* Font size */\n"
-"}\n"
-"\n"
-"QLabel {\n"
-"    color: #333333; /* Text color */\n"
-"    font-size: 12px; /* Font size */\n"
-"    font-weight: bold; /* Font weight */\n"
-"}\n"
-"\n"
-"")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.left_menu_widget = QWidget(self.centralwidget)
         self.left_menu_widget.setObjectName(u"left_menu_widget")
-        self.left_menu_widget.setStyleSheet(u"QFrame {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.verticalLayout = QVBoxLayout(self.left_menu_widget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.frame_3 = QFrame(self.left_menu_widget)
@@ -167,11 +146,27 @@ class Ui_MainWindow(object):
         self.frame_11.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_7 = QHBoxLayout(self.frame_11)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.pushButton_7 = QPushButton(self.frame_11)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/icons/minimize-svgrepo-com.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_7.setIcon(icon4)
+
+        self.horizontalLayout_7.addWidget(self.pushButton_7)
+
+        self.pushButton_8 = QPushButton(self.frame_11)
+        self.pushButton_8.setObjectName(u"pushButton_8")
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/icons/enlarge-2-svgrepo-com.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_8.setIcon(icon5)
+
+        self.horizontalLayout_7.addWidget(self.pushButton_8)
+
         self.pushButton_9 = QPushButton(self.frame_11)
         self.pushButton_9.setObjectName(u"pushButton_9")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/icons/cross-svgrepo-com.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_9.setIcon(icon4)
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/icons/cross-svgrepo-com.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_9.setIcon(icon6)
 
         self.horizontalLayout_7.addWidget(self.pushButton_9)
 
@@ -183,26 +178,18 @@ class Ui_MainWindow(object):
 
         self.frame_8 = QFrame(self.frame_2)
         self.frame_8.setObjectName(u"frame_8")
-        self.frame_8.setStyleSheet(u"")
         self.frame_8.setFrameShape(QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.frame_8)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.stackedWidget = QStackedWidget(self.frame_8)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setStyleSheet(u"QFrame#frame_16#fame_17#fame_24#fame_25 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.line_chart = QWidget()
         self.line_chart.setObjectName(u"line_chart")
-        self.line_chart.setStyleSheet(u"")
         self.verticalLayout_6 = QVBoxLayout(self.line_chart)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_16 = QFrame(self.line_chart)
         self.frame_16.setObjectName(u"frame_16")
-        self.frame_16.setStyleSheet(u"QFrame#frame_16 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_16.setFrameShape(QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QFrame.Raised)
         self.verticalLayout_7 = QVBoxLayout(self.frame_16)
@@ -223,9 +210,6 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_17.sizePolicy().hasHeightForWidth())
         self.frame_17.setSizePolicy(sizePolicy)
-        self.frame_17.setStyleSheet(u"QFrame#frame_17 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_17)
@@ -240,9 +224,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.frame_18 = QFrame(self.temperature_records)
         self.frame_18.setObjectName(u"frame_18")
-        self.frame_18.setStyleSheet(u"QFrame#frame_18 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_18.setFrameShape(QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QFrame.Raised)
         self.verticalLayout_8 = QVBoxLayout(self.frame_18)
@@ -260,9 +241,6 @@ class Ui_MainWindow(object):
         self.frame_19.setObjectName(u"frame_19")
         sizePolicy.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
         self.frame_19.setSizePolicy(sizePolicy)
-        self.frame_19.setStyleSheet(u"QFrame {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_19.setFrameShape(QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.frame_19)
@@ -277,9 +255,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.frame_20 = QFrame(self.nested_donuts)
         self.frame_20.setObjectName(u"frame_20")
-        self.frame_20.setStyleSheet(u"QFrame#frame_20 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
         self.verticalLayout_10 = QVBoxLayout(self.frame_20)
@@ -297,9 +272,6 @@ class Ui_MainWindow(object):
         self.frame_21.setObjectName(u"frame_21")
         sizePolicy.setHeightForWidth(self.frame_21.sizePolicy().hasHeightForWidth())
         self.frame_21.setSizePolicy(sizePolicy)
-        self.frame_21.setStyleSheet(u"QFrame#frame_21 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_21.setFrameShape(QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_21)
@@ -314,9 +286,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.frame_22 = QFrame(self.percentage_bar_chart)
         self.frame_22.setObjectName(u"frame_22")
-        self.frame_22.setStyleSheet(u"QFrame#frame_22 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_22.setFrameShape(QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QFrame.Raised)
         self.verticalLayout_12 = QVBoxLayout(self.frame_22)
@@ -334,9 +303,6 @@ class Ui_MainWindow(object):
         self.frame_23.setObjectName(u"frame_23")
         sizePolicy.setHeightForWidth(self.frame_23.sizePolicy().hasHeightForWidth())
         self.frame_23.setSizePolicy(sizePolicy)
-        self.frame_23.setStyleSheet(u"QFrame#frame_23 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.frame_23.setFrameShape(QFrame.StyledPanel)
         self.frame_23.setFrameShadow(QFrame.Raised)
         self.gridLayout_4 = QGridLayout(self.frame_23)
@@ -347,13 +313,6 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.percentage_bar_chart)
         self.bar_chart = QWidget()
         self.bar_chart.setObjectName(u"bar_chart")
-        self.bar_chart.setStyleSheet(u"QFrame#frame_24 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}\n"
-"\n"
-"QFrame#frame_25 {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
         self.verticalLayout_15 = QVBoxLayout(self.bar_chart)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_24 = QFrame(self.bar_chart)
@@ -391,16 +350,12 @@ class Ui_MainWindow(object):
 
         self.frame_9 = QFrame(self.frame_2)
         self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setStyleSheet(u"")
         self.frame_9.setFrameShape(QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.frame_9)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.label_2 = QLabel(self.frame_9)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setStyleSheet(u"QFrame {\n"
-"    border: 1px solid #000000; /* 1px solid black border for all frames */\n"
-"}")
 
         self.horizontalLayout_8.addWidget(self.label_2)
 
@@ -421,7 +376,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -437,6 +392,8 @@ class Ui_MainWindow(object):
         self.bar_chart_button.setText(QCoreApplication.translate("MainWindow", u"bar chart", None))
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"MENU", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"DASHBOARD", None))
+        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"minimize", None))
+        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"expand", None))
         self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"close", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"LINE CHART", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"TEMPERATURE  BAR CHART", None))

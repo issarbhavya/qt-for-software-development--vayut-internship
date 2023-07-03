@@ -1,0 +1,21 @@
+{
+    "QStackedWidget":[
+        {
+            "navigation": [
+                {
+                    "navigationbuttons":[
+                        {
+                            "percentage_bar_button" : "percentage_bar_chart",
+                            "temperature_record_button" :"temperature_records" ,
+                            "nested_donut_button":"nested_donuts",
+                            "line_chart_button": "line_chart" ,
+                            "bar_chart_button" : "bar_chart"
+
+                        }
+                    ]
+                }
+            ]
+
+        }
+    ]
+}
