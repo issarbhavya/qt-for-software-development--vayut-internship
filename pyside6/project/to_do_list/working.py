@@ -1,7 +1,7 @@
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget,QListWidget,QListWidgetItem,QMessageBox
-from ui_widget import Ui_Widget
+from project.Qt-charts.ui_widget import Ui_Widget
 
 import sqlite3
 
