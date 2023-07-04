@@ -15,8 +15,9 @@ class Widget(QWidget,Ui_Form):
         for i in range(self.listWidget.count()):
             
             item=self.listWidget.item(i)
-            data=item.data(Qt.DisplayRole)
+            print("item is", item)
             
+            data=item.data(Qt.DisplayRole)
             print(data)
        
     def add_button_pressed(self):
