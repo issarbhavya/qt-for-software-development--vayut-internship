@@ -31,6 +31,7 @@ company_names = {
 
 # Add parent items with random data
 for index, (parent_name, child_names) in enumerate(company_names.items()):
+    # enumerate :iterate over a sequence while also keeping track of an index for each item in the sequence
     parent_item = QTreeWidgetItem(tree_widget)
     parent_item.setText(0, str(random.randint(1, 100)))  # Random ID
     parent_item.setText(1, parent_name)  # Parent name
