@@ -33,19 +33,19 @@ class MainWindow(QMainWindow):
        
         
         # Creating top-level and child items
-        self.topLevelItem = QStandardItem("Top Level Item")
-        self.childItem1 = QStandardItem("Child 1")
-        self.childItem2 = QStandardItem()
-        self.childItem3 = QStandardItem()
-        self.childItem4 = QStandardItem()
+        self.topLevelItem = QStandardItem()
+        # self.childItem1 = QStandardItem("Child 1")
+        # self.childItem2 = QStandardItem()
+        # self.childItem3 = QStandardItem()
+        # self.childItem4 = QStandardItem()
 
         # Creating buttons and line edit
-        self.topLevelButton = QPushButton("Top Level Button")
-        self.childButton1 = QPushButton("Child Button 1")
-        self.childButton2 = QPushButton("Child Button 2")
+        # self.topLevelButton = QPushButton("Top Level Button")
+        # self.childButton1 = QPushButton("Child Button 1")
+        # self.childButton2 = QPushButton("Child Button 2")
         self.custom_widget = label_plus_button("SBC")
-        self.childLineEdit = QLineEdit()
-        self.childLineEdit.setPlaceholderText("Add Text Here")
+        # self.childLineEdit = QLineEdit()
+        # self.childLineEdit.setPlaceholderText("Add Text Here")
 
         # Adding child items to the top level item
         self.topLevelItem.appendRow([self.childItem1])
