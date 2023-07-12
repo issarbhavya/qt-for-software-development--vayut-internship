@@ -1,37 +1,40 @@
-import os
+from PySide6.QtWidgets import (
+    QTreeView, QAbstractItemView, QPushButton, QLabel, QDialog,
+    QVBoxLayout, QApplication, QLineEdit, QRadioButton, QWidget, QStyledItemDelegate
+)
+from PySide6.QtGui import QStandardItemModel, QStandardItem
+from PySide6.QtCore import Qt
 import sys
-from PySide6.QtGui import QStandardItem, QStandardItemModel
-
-
-from ui_widget import *
-
 from custombuttonStack import label_plus_button
 
-class MainWindow(QMainWindow):
-    def __init__(self, parent=None):
-        QMainWindow.__init__(self)
-        self.ui =Ui_MainWindow()
-        # self.ui.resize(700, 300)
-        
-        # self.ui.model =QStandardItemModel()
-        # self.ui.treeView= QTreeView()
-        
-        # self.ui.treeView.setModel(self.ui.model)
 
-        self.ui.setupUi(self)
-        
-        
-        self.setup_tree_view()
-        
-    def setup_tree_view(self):
-        # Create the model
+class TreeViewWithWidgetItems(QDialog):
+    def __init__(self):
+        super(TreeViewWithWidgetItems, self).__init__()
+        self.init_ui()
+
+    def init_ui(self):
+        # Creating the required widgets
+        self.vboxLayout = QVBoxLayout()
+        self.treeView = QTreeView()
+
+        self.custom_widget = QWidget()
+
+        self.label = QLabel("I'm going to inform you about the buttons")
+
+        # Adding the widgets to the layout
+        self.vboxLayout.addWidget(self.treeView)
+        self.vboxLayout.addWidget(self.label)
+
+        # # Setting up the QTreeView
+        self.treeView.setHeaderHidden(True)
+        # self.treeView.setSelectionMode(QAbstractItemView.NoSelection)
+        # self.treeView.setIndentation(20)
+
+        # Creating the model
         self.model = QStandardItemModel()
-        self.ui.treeView.setModel(self.model)
+        self.treeView.setModel(self.model)
 
-        # Set the header labels for each column
-        self.model.setHorizontalHeaderLabels(['System Designer', 'Comms', 'Sensors', 'Actuators'])
-       
-        
         # Creating top-level and child items
         self.topLevelItem = QStandardItem("Top Level Item")
         self.childItem1 = QStandardItem("Child 1")
@@ -63,9 +66,9 @@ class MainWindow(QMainWindow):
         # Adding items to the model
         self.model.appendRow([self.topLevelItem])
 
-        # # Setting delegates for specific columns
-        # delegate = QStyledItemDelegate(self.treeView)
-        # self.treeView.setItemDelegate(delegate)
+        # Setting delegates for specific columns
+        delegate = QStyledItemDelegate(self.treeView)
+        self.treeView.setItemDelegate(delegate)
 
         # Setting widgets as editors for specific items
         self.treeView.setIndexWidget(self.childItem1.index(), self.childButton1)
@@ -78,18 +81,11 @@ class MainWindow(QMainWindow):
         # Setting the layout
         self.setWindowTitle("QTreeView with Button Example")
         self.setLayout(self.vboxLayout)
-        
 
 
 
-        self.show()
-        
-if __name__ == "__main__":
-    app= QApplication(sys.argv)
-    
-    window= MainWindow()
-    window.show()
-    sys.exit(app.exec_())
-    
-    
-    
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    treeViewDialog = TreeViewWithWidgetItems()
+    treeViewDialog.show()
+    sys.exit(app.exec())
