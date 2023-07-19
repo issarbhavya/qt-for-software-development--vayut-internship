@@ -5,7 +5,7 @@ from PySide6.QtGui import QStandardItem, QStandardItemModel
 
 from ui_widget import *
 
-from custombuttonStack import label_plus_button
+from custom_widget import populate_treeview
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -13,11 +13,6 @@ class MainWindow(QMainWindow):
         self.ui =Ui_MainWindow()
         # self.ui.resize(700, 300)
         
-        # self.ui.model =QStandardItemModel()
-        # self.ui.treeView= QTreeView()
-        
-        # self.ui.treeView.setModel(self.ui.model)
-
         self.ui.setupUi(self)
         
         
@@ -27,6 +22,8 @@ class MainWindow(QMainWindow):
         # Create the model
         self.model = QStandardItemModel()
         self.ui.treeView.setModel(self.model)
+        # self.ui.treeView.setColumnWidth(400,400)
+
 
         # Set the header labels for each column
         self.model.setHorizontalHeaderLabels(['System Designer', 'Comms', 'Sensors', 'Actuators'])
@@ -34,45 +31,13 @@ class MainWindow(QMainWindow):
         
         # Creating top-level and child items
         self.topLevelItem = QStandardItem()
-        # self.childItem1 = QStandardItem("Child 1")
-        # self.childItem2 = QStandardItem()
-        # self.childItem3 = QStandardItem()
-        # self.childItem4 = QStandardItem()
 
-        # Creating buttons and line edit
-        # self.topLevelButton = QPushButton("Top Level Button")
-        # self.childButton1 = QPushButton("Child Button 1")
-        # self.childButton2 = QPushButton("Child Button 2")
-        self.custom_widget = label_plus_button("SBC")
-        # self.childLineEdit = QLineEdit()
-        # self.childLineEdit.setPlaceholderText("Add Text Here")
+        self.custom_widget = populate_treeview("NYATVA")
 
-        # Adding child items to the top level item
-        self.topLevelItem.appendRow([self.childItem1])
-        self.topLevelItem.appendRow([self.childItem2])
-        self.topLevelItem.appendRow([self.childItem4])
-        self.topLevelItem.appendRow([self.childItem3])
-        
-        # Adding subchild item to childItem3
-        subchildItem = QStandardItem()
-        self.childItem3.appendRow([subchildItem])
-
-        # Creating the custom widget for subchild item
-        subchildWidget = label_plus_button("mcu")
-
-        # Adding items to the model
         self.model.appendRow([self.topLevelItem])
 
-        # # Setting delegates for specific columns
-        # delegate = QStyledItemDelegate(self.treeView)
-        # self.treeView.setItemDelegate(delegate)
+        self.ui.treeView.setIndexWidget(self.topLevelItem.index(), self.custom_widget)
 
-        # Setting widgets as editors for specific items
-        self.ui.treeView.setIndexWidget(self.childItem1.index(), self.childButton1)
-        self.ui.treeView.setIndexWidget(self.childItem2.index(), self.childButton2)
-        self.ui.treeView.setIndexWidget(self.childItem4.index(), self.custom_widget)
-        self.ui.treeView.setIndexWidget(self.childItem3.index(), self.childLineEdit)
-        self.ui.treeView.setIndexWidget(subchildItem.index(), subchildWidget)
 
 
         # Setting the layout

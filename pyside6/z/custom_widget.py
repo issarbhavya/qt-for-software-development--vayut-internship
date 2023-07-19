@@ -13,5 +13,18 @@ class populate_treeview(QWidget):
     def __init__(self,text) -> None:
         super(populate_treeview, self).__init__()
         self.custom_layout= QHBoxLayout()
+        self.add_button= QPushButton("+")
+        self.add_button.setFixedSize(20, 20)
+        self.label_added=QLabel(text)
+        self.label_added.setStyleSheet("border: 2px solid grey;")
+        self.custom_layout.addWidget(self.add_button)
+        self.custom_layout.addWidget(self.label_added)
+        self.setLayout(self.custom_layout)
+        self.return_function()
+
+    def return_function(self):
+        print("\n\n\nyou reached here ")
+        return self
+
         
         
