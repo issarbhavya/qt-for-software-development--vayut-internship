@@ -25,6 +25,7 @@ class MainWindow(QMainWindow):
         # self.ui.treeView.setColumnWidth(400,400)
 
 
+
         # Set the header labels for each column
         self.model.setHorizontalHeaderLabels(['System Designer', 'Comms', 'Sensors', 'Actuators'])
        
