@@ -5,7 +5,25 @@ from PySide6.QtGui import QStandardItem, QStandardItemModel
 
 from ui_widget import *
 
-from custom_widget import populate_treeview
+from custom_widget import component, create_component_tree
+
+
+struct = {
+        'ROBOT1': {
+            "details":{
+                "name":{}
+            },
+            'SBC1': {
+                'MCU1': {}
+            }
+        },
+        'ROBOT2': {
+            'SBC2': {
+                'MCU2': {}
+            }
+        }
+}
+
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -22,32 +40,27 @@ class MainWindow(QMainWindow):
         # Create the model
         self.model = QStandardItemModel()
         self.ui.treeView.setModel(self.model)
-        # self.ui.treeView.setColumnWidth(400,400)
-
+        # self.ui.treeView.setColumnWidth(0,400)
 
 
         # Set the header labels for each column
         self.model.setHorizontalHeaderLabels(['System Designer', 'Comms', 'Sensors', 'Actuators'])
-       
-        
+        base_comp = component('NYATVA',None,self.model,self.ui.treeView)
+        item = QStandardItem()
+        self.model.appendRow([item])
+        self.ui.treeView.setIndexWidget(item.index(),base_comp)
         # Creating top-level and child items
-        self.topLevelItem = QStandardItem()
-
-        self.custom_widget = populate_treeview("NYATVA")
-
-        self.model.appendRow([self.topLevelItem])
-
-        self.ui.treeView.setIndexWidget(self.topLevelItem.index(), self.custom_widget)
 
 
 
         # Setting the layout
         self.ui.treeView.expandAll()
-        
+        create_component_tree(base_comp,struct)
+
+        self.ui.treeView.setColumnWidth(0,200)
 
 
 
-        self.show()
         
 if __name__ == "__main__":
     app= QApplication(sys.argv)
