@@ -3,9 +3,10 @@ import random
 from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidget, QTreeWidgetItem,QPushButton
 from PySide6.QtGui import QStandardItem, QStandardItemModel
 
-from ui_widget import *
+from frontend_og_ui import *
 
 from custom_widget import component, create_component_tree
+
 
 struct = {
         'ROBOT1': {
@@ -23,10 +24,11 @@ struct = {
         }
 }
 
-class MainWindow(QMainWindow):
+
+class SysDes(QWidget):
     def __init__(self, parent=None):
-        QMainWindow.__init__(self)
-        self.ui =Ui_MainWindow()
+        QWidget.__init__(self)
+        self.ui =Ui_Form()
         # self.ui.resize(700, 300)
         
         self.ui.setupUi(self)
@@ -58,10 +60,6 @@ class MainWindow(QMainWindow):
         self.ui.treeView.setColumnWidth(0,200)
 
 
-
 # Create the tree widget
-
 def get_designer():
-    
-    window= MainWindow()
-    return window
+    return SysDes

@@ -3,7 +3,7 @@ import sys
 from PySide6.QtGui import QStandardItem, QStandardItemModel
 
 
-from ui_widget import *
+from frontend_og_ui import *
 
 from custom_widget import component, create_component_tree
 
